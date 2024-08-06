@@ -1,9 +1,20 @@
+@font-face {
+  font-family: yekan;
+  src: url(./../fonts/iranyekan.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: yekan-bold;
+  src: url(./../fonts/iranyekan-bold.ttf) format('truetype');
+}
+
 :root {
   --body-color: #f2f6fc;
   --first-color: #fd500e;
   --border-color: #e8e9ed;
   --white-color: #fff;
   --text-color: rgb(17 24 39);
+  --input-border-color: #6b7280;
 }
 
 * {
@@ -14,12 +25,31 @@
 
 body {
   background-color: var(--body-color);
-  font-family: sans-serif;
+  font-family: yekan, sans-serif;
 }
 
 img {
   width: 100%;
   height: auto;
+}
+
+.orange {
+  color: var(--first-color);
+}
+
+/* ================== Header ================== */
+.header {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  background-color: var(--white-color);
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
 }
 
 /* ================== Services ================== */
@@ -30,6 +60,9 @@ img {
 
 .services__title {
   text-align: center;
+  font-size: 30px;
+  font-family: yekan-bold;
+  margin-bottom: 8px;
 }
 
 .services__description {
@@ -41,6 +74,7 @@ img {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
+  margin-block: 1rem;
 }
 
 .service__item {
@@ -53,6 +87,11 @@ img {
   gap: 16px;
 }
 
+.service__item-title {
+  font-size: 20px;
+  font-family: yekan-bold;
+}
+
 .service__item-buttons {
   display: flex;
   flex-direction: column;
@@ -60,6 +99,7 @@ img {
 }
 
 .service__item-buttons button {
+  font-family: yekan-bold;
   padding: 24px;
   border: 1px solid var(--border-color);
   color: var(--first-color);
@@ -73,6 +113,19 @@ img {
   display: flex;
   flex-direction: column;
   padding-inline: 12px;
+  gap: 1rem;
+}
+
+.contact__blob {
+  margin-top: -16px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.contact__title {
+  text-align: center;
+  font-family: yekan-bold;
+  margin-bottom: 4px;
 }
 
 .contact__info,
@@ -89,12 +142,13 @@ img {
 }
 
 .contact__item {
+  font-family: yekan-bold;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 12px;
   border-bottom: 1px solid var(--border-color);
-  color: var(--text-color);
+  color: var(--first-color);
   transition: all 0.2s;
 }
 
@@ -118,14 +172,20 @@ img {
   gap: 8px;
 }
 
+.contact__form-item {
+  margin-bottom: 1rem;
+}
+
 .contact__form-item label {
   padding-inline: 16px;
+  font-size: 14px;
+  margin-bottom: 4px;
 }
 
 .contact__form-item input,
 .contact__form-item textarea {
   border-radius: 1.5rem;
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--input-border-color);
   padding: 12px 20px;
 }
 
@@ -140,24 +200,77 @@ img {
   outline: none;
 }
 
+.contact__form-item input::placeholder,
+.contact__form-item textarea::placeholder {
+  font-family: yekan, sans-serif;
+  font-size: 14px;
+}
+
 .contact__form-submit {
   align-self: flex-start;
   background-color: transparent;
   border: 1px solid var(--border-color);
   border-radius: 1.5rem;
   padding: 8px 24px;
+  font-family: yekan-bold;
+  font-size: 1rem;
 }
 
 /* ================== Summary ================== */
+.summary {
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 24px;
+  background-color: var(--white-color);
+}
+
 .summary__rate {
   display: flex;
   flex-direction: row;
   gap: 3px;
 }
+
+.summary__title {
+}
+
 .bxs-star {
   color: #ccc;
 }
-
+/* ================== Footer ================== */
 .footer {
   padding-block: 2rem;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__title {
+  padding-left: 20px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.footer__mdias {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__apps{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__apps button{
+  padding: 16px 8px;
+  border-radius: 1.5rem;
+  border: none;
+}
+
+.footer__medias-blob {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
 }
