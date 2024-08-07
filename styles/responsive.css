@@ -37,5 +37,9 @@
   .footer__container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .footer__apps {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
