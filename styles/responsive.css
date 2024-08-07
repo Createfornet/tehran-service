@@ -5,29 +5,56 @@
 @media screen and (min-width: 576px) {
   .header,
   .main,
-  .footer{
+  .footer {
     max-width: 576px;
   }
 }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .header,
+  .main,
+  .footer {
+    max-width: 768px;
+  }
+ }
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
   .header,
   .main,
-  .footer{
+  .footer {
     max-width: 992px;
   }
 
-  .main{
+  .nav__btn-menu {
+    display: none;
+  }
+
+  .nav__list {
+    display: flex;
+  }
+
+  .nav__banner {
+    padding-block: 0;
+    width: 275px;
+    background-color: transparent;
+  }
+
+  .main {
     padding-top: 120px;
   }
 
-  .nav{
+  .numbers {
     display: flex;
   }
 
   .services__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service__item-buttons {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .contact {
@@ -42,4 +69,3 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
