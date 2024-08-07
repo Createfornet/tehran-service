@@ -28,34 +28,73 @@ body {
   font-family: yekan, sans-serif;
 }
 
+section {
+  margin-bottom: 2.5rem;
+}
+
 img {
   width: 100%;
   height: auto;
+}
+
+button{
+  cursor: pointer;
 }
 
 .orange {
   color: var(--first-color);
 }
 
-/* ================== Header ================== */
+/* ================== Main ================== */
+.main {
+  padding-top: 90px;
+}
+
+.header,
+.main,
+.footer {
+  margin-inline: auto;
+  max-width: calc(100% - 24px);
+}
+
+/* ================== Header & Nav ================== */
+.nav {
+  display: none;
+  justify-content: space-between;
+}
+
 .header {
   position: fixed;
   top: 0;
-  height: 50px;
   background-color: var(--white-color);
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   border: 1px solid var(--border-color);
-  width: 90%;
   left: 0;
   right: 0;
-  margin-inline: auto;
+}
+
+.header__container {
+  padding-inline: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__btn-menu {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+}
+
+.header__banner {
+  padding-block: 12px;
+  width: 230px;
+  background-color: #f9e3c8;
 }
 
 /* ================== Services ================== */
 .services {
   color: var(--first-color);
-  padding-inline: 12px; /* need responsive */
 }
 
 .services__title {
@@ -110,9 +149,8 @@ img {
 
 /* ================== Contact ================== */
 .contact {
-  display: flex;
-  flex-direction: column;
-  padding-inline: 12px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
 }
 
@@ -217,10 +255,9 @@ img {
 }
 
 /* ================== Summary ================== */
-.summary {
+.summary__container {
   border: 1px solid var(--border-color);
   border-radius: 1.5rem;
-  padding: 24px;
   background-color: var(--white-color);
 }
 
@@ -242,8 +279,8 @@ img {
 }
 
 .footer__container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .footer__title {
@@ -257,12 +294,12 @@ img {
   flex-direction: row;
 }
 
-.footer__apps{
+.footer__apps {
   display: flex;
   flex-direction: column;
 }
 
-.footer__apps button{
+.footer__apps button {
   padding: 16px 8px;
   border-radius: 1.5rem;
   border: none;

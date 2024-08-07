@@ -1,0 +1,41 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Maim CSS */
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+  .header,
+  .main,
+  .footer{
+    max-width: 576px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .header,
+  .main,
+  .footer{
+    max-width: 992px;
+  }
+
+  .main{
+    padding-top: 120px;
+  }
+
+  .nav{
+    display: flex;
+  }
+
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
